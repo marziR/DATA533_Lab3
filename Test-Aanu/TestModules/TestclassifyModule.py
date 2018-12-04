@@ -7,25 +7,24 @@
 import unittest
 from personal.fitness import classify
 
-@classmethod 
-def setUpClass(cls): 
+@classmethod
+def setUpClass(cls):
     print('setupClass')
 
-class TestBmicla(unittest.TestCase):
+class TestBmicat(unittest.TestCase):
     def setUp(self):
         print('Set Up')
-    
-    def test_bmicla(self):
-        self.assertEqual(bmicla(16), 'Underweight')
-        self.assertEqual(bmicla(23), 'Healthy')
-        self.assertEqual(bmicla(29), 'Overweight')
-        self.assertEqual(bmicla(33), 'Obese')
-        self.assertEqual(bmicla(52), 'Morbidly Obese')
-        
-    def tearDown(self):
-        print('Tear Down')  
-        
-@classmethod 
-def tearDownClass(cls): 
-    print('teardownClass') 
 
+    def test_bmicat(self):
+        self.assertEqual(bmicat(16), 'Underweight')
+        self.assertEqual(bmicat(23), 'Healthy')
+        self.assertEqual(bmicat(29), 'Overweight')
+        self.assertEqual(bmicat(33), 'Obese')
+        self.assertEqual(bmicat(52), 'Morbidly Obese')
+
+    def tearDown(self):
+        print('Tear Down')
+
+@classmethod
+def tearDownClass(cls):
+    print('teardownClass')
